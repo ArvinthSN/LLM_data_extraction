@@ -1,0 +1,8 @@
+﻿* text=auto
+
+# Force LF for source code
+*.py text eol=lf
+*.csv text eol=lf
+*.xml text eol=lf
+*.iml text eol=lf
+.idea/** text eol=lf
