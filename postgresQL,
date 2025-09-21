@@ -1,0 +1,46 @@
+-- 1. Create a new database
+CREATE DATABASE llm_data;
+
+-- 2. Connect to the new database
+\c llm_data
+
+-- 3. Create a table for your dataset
+CREATE TABLE dataset (
+    id SERIAL PRIMARY KEY,
+    text_column TEXT,
+    label_column TEXT,
+    source_column TEXT
+);
+
+-- 4. Import CSV file into the table
+-- Use absolute path to your file
+\copy dataset(text_column, label_column, source_column)
+FROM 'C:/huggingface_etl/huggingface_llm_dataset.csv'
+DELIMITER ',' CSV HEADER;
+
+-- 5. Verify the data
+SELECT * FROM dataset LIMIT 10;
+
+
+
+
+GIT COMMANDS
+git --version for checking git is installed in locally on your system
+
+git config --global user.name "username in git"
+
+git config --global user.email "toemailin git"
+
+git status   the projects file are present
+
+git add .   to add all file
+
+git commit -m "what changes u did"
+
+git init "https link of your repository"
+
+git .ignore to ingnore unwanted and private file
+
+git push to push the file
+
+
